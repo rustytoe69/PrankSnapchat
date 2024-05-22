@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/profilePicView"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/ic_launcher_foreground" />
+
+    <ImageView
+        android:id="@+id/statusImageView"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/statusTextView"
+        app:layout_constraintStart_toEndOf="@+id/profilePicView"
+        app:layout_constraintTop_toTopOf="@+id/statusTextView"
+        tools:src="@drawable/emptysnap" />
+
+    <TextView
+        android:id="@+id/usernameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:fontFamily="@font/archivo"
+        android:textColor="#000000"
+        android:textSize="22sp"
+        app:layout_constraintLeft_toRightOf="@id/profilePicView"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Brock" />
+
+    <TextView
+        android:id="@+id/statusTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/archivo"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/statusImageView"
+        app:layout_constraintTop_toBottomOf="@id/usernameTextView"
+        tools:text="New Snap" />
+
+    <TextView
+        android:id="@+id/grayLine"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:background="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/statusTextView" />
+
+    <TextView
+        android:id="@+id/dotTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text=" •"
+        android:textSize="13sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/statusTextView"
+        app:layout_constraintStart_toEndOf="@+id/statusTextView" />
+
+    <TextView
+        android:id="@+id/timeSentTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/archivo"
+        android:text="14m"
+        android:textSize="13sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/dotTextView"
+        app:layout_constraintStart_toEndOf="@+id/dotTextView" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.50" />
+
+    <ImageView
+        android:id="@+id/cameraIconImageView"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline3"
+        app:srcCompat="@drawable/baseline_photo_camera_24" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
